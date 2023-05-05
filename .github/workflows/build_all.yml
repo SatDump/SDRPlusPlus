@@ -319,7 +319,7 @@ jobs:
               path: ${{runner.workspace}}/sdrpp.apk
 
     create_full_archive:
-        needs: ['build_windows', 'build_macos', 'build_debian_buster', 'build_debian_bullseye', 'build_debian_sid', 'build_ubuntu_focal', 'build_ubuntu_jammy', 'build_raspios_bullseye_armhf', 'build_android']
+        needs: ['build_windows', 'build_macos', 'build_debian_bullseye', 'build_debian_sid', 'build_ubuntu_focal', 'build_ubuntu_jammy', 'build_android']
         runs-on: ubuntu-latest
 
         steps:
