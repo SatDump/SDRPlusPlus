@@ -1,4 +1,4 @@
-# SDR++, The bloat-free SDR software<br>
+# SDR++, The bloat-free SDR software<br> (Fork with some SatDump-related additions)
 
 ![Screenshot](https://i.imgur.com/Ter2MQJ.png)
 SDR++ is a cross-platform and open source SDR software with the aim of being bloat free and simple to use.
