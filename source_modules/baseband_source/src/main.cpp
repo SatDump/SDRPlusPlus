@@ -29,7 +29,13 @@ ConfigManager config;
 
 class BasebandSourceModule : public ModuleManager::Instance {
 public:
-    BasebandSourceModule(std::string name) : fileSelect("", { "ZIQ Files (*.ziq)", "*.ziq", "All Files", "*" }) {
+    BasebandSourceModule(std::string name) : fileSelect("", { "ZIQ Files (*.ziq)", "*.ziq",
+                                                              "S8 Files (*.s8)", "*.s8",
+                                                              "S16 Files (*.s16)", "*.s16",
+                                                              "F32 Files (*.f32)", "*.f32",
+                                                              "U8 Files (*.u8)", "*.u8",
+                                                              "WAV Files (*.wav)", "*.wav",
+                                                              "All Files", "*" }) {
         this->name = name;
 
         if (core::args["server"].b()) { return; }
@@ -95,6 +101,7 @@ private:
         _this->running = true;
         _this->workerThread = std::thread(worker, _this);
         flog::info("BasebandSourceModule '{0}': Start!", _this->name);
+        core::setInputSampleRate(_this->sampleRate);
     }
 
     static void stop(void* ctx) {
