@@ -170,10 +170,8 @@ namespace dsp {
         }
 
         inline void set_progress(size_t progress) {
-#ifdef BUILD_ZIQ
             if (format == ZIQ)
                 return;
-#endif
 
             if (format == ZIQ2) {
                 main_mtx.lock();
