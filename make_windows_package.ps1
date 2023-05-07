@@ -54,6 +54,8 @@ cp $build_dir/source_modules/spyserver_source/Release/spyserver_source.dll sdrpp
 
 # cp $build_dir/source_modules/usrp_source/Release/usrp_source.dll sdrpp_windows_x64/modules/
 
+cp $build_dir/source_modules/baseband_source/Release/baseband_source.dll sdrpp_windows_x64/modules/
+
 
 # Copy sink modules
 cp $build_dir/sink_modules/audio_sink/Release/audio_sink.dll sdrpp_windows_x64/modules/
@@ -84,6 +86,7 @@ cp $build_dir/misc_modules/rigctl_server/Release/rigctl_server.dll sdrpp_windows
 
 cp $build_dir/misc_modules/scanner/Release/scanner.dll sdrpp_windows_x64/modules/
 
+cp $build_dir/misc_modules/baseband_sink/Release/baseband_sink.dll sdrpp_windows_x64/modules/
 
 # Copy supporting libs
 cp 'C:/Program Files/PothosSDR/bin/libusb-1.0.dll' sdrpp_windows_x64/
